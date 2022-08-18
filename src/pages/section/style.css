@@ -1,0 +1,88 @@
+.intro-container {
+    background-color:#0B6E4F;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+}
+.left-sub-container {
+    width: 50%;
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 10vw;
+}
+.left-sub-container h5 {
+    font-size: 1.5rem;
+    margin-bottom: 0px;
+    font-weight: 400;
+    margin-right: 50px;
+}
+.left-sub-container h3 {
+    font-weight: 600;
+    font-size: 2.3rem;
+    margin-top: 3px;
+    margin-bottom: 0px;
+}
+.left-sub-container p {
+    font-size: 1.2rem;
+   margin-top: 15px;
+   font-weight: 200;
+}
+
+.right-sub-container {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right-sub-container img {
+    width: 38vw;
+    height: 68vh;
+}
+
+.subjects-corousel {
+    width: 80vw;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    margin-left: 140px;
+    margin-right: 30px;
+}
+#sub-para{
+    width: 80vw;
+    margin-left: 140px;
+}
+.subject-question-container {
+    width: 80vw;
+    height: 100vh;
+    display: flex;
+    margin-left: 140px;
+    margin-top: 50px;
+}
+.subject-choice {
+    width: 20vw;
+    height: 40vh;
+    margin-left: 50px;
+}
+.questions-contents {
+    width: 100vw;
+    height: auto;
+    background-color: #F8F8F8;
+    overflow-y:scroll;
+    overflow-x: hidden;
+   
+}
+.collaspsible {
+    background-color: #0B6E4F;
+}
