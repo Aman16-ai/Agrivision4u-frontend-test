@@ -1,0 +1,29 @@
+.questions-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+.left-bar {
+    width: 20vw;
+    height: 100vh;
+}
+.right {
+    width: 80vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    
+}
+.questions {
+    width: 70vw;
+    height: 70vh;
+    display: flex;
+    margin-top: 50px;
+}
+.filter-container {
+    width: 50vw;
+    margin-left: 50px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}

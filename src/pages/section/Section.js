@@ -11,6 +11,8 @@ import { Link, useSearchParams } from 'react-router-dom'
 import SectionQuestionCard from '../../components/SectionQuestionCard'
 import { ArrowDropDown } from '@mui/icons-material'
 import { circleQuizQuestions,triangleQuizQuestions } from '../../static/content/QuestionsData'
+import PackageCard from '../../components/PackageCard'
+import PackageCarousel from '../../components/PackageCarousel'
 
 export default function Section() {
 
@@ -121,8 +123,11 @@ export default function Section() {
                 </div>
             </div>
 
-            <div style={{marginTop:"90px",marginLeft:"70px",color:"#0B6E4F",fontWeight:"bolder"}}>
-                <Typography variant={"h4"}>Checkout other packages</Typography>
+            <div style={{marginTop:"90px",marginLeft:"70px",marginBottom:"20px"}}>
+                <Typography style={{color:"#0B6E4F",fontWeight:"bolder"}} variant={"h4"}>Checkout other packages</Typography>
+                <div style={{width:"44vw",height:"auto"}}>
+                    <PackageCarousel/>
+                </div>
             </div>
         </div>
 

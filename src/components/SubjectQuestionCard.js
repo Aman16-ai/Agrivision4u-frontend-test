@@ -3,7 +3,7 @@ import { height, Stack } from '@mui/system'
 import React, { useRef, useState,useEffect } from 'react'
 import {RadioGroup,Radio,FormControl,FormControlLabel} from '@mui/material'
 
-export default function SectionQuestionCard(props) {
+export default function SubjectQuestionCard(props) {
     const questionData = props.data
     const [userAnswer,setUserAnswer] = useState({});
     const openCardRef = useRef(0)
@@ -18,7 +18,7 @@ export default function SectionQuestionCard(props) {
     }
 
     const handleCheckAnswer = () => {
-        openCardRef.current.style.display="block"
+        openCardRef.current.style.display="block"   
     }
     useEffect(()=> {
         openCardRef.current.style.display="none"
@@ -54,8 +54,7 @@ export default function SectionQuestionCard(props) {
                 </FormControl>
             </Stack>
             <Stack direction={"row"} style={{ marginLeft: "180px",marginBottom:"40px", marginTop: "20px", marginRight: "40px" }}>
-                <Button onClick={handleCheckAnswer} style={{fontSize:"10px",width:"10vw",color:"white",backgroundColor:'#13AE7E',boxShadow:"0px 4px 13px rgba(0, 0, 0, 0.25)"}}>Answer & solution</Button>
-                <Button style={{marginLeft:"20px",width:"10vw",marginRight:"20px",fontSize:"10px",color:"white",backgroundColor:'#5F5F5F',boxShadow:"0px 4px 13px rgba(0, 0, 0, 0.25)"}}>Join Discussion</Button>
+                <Button onClick={handleCheckAnswer} style={{marginRight:"15px",fontSize:"10px",width:"10vw",color:"white",backgroundColor:'#13AE7E',boxShadow:"0px 4px 13px rgba(0, 0, 0, 0.25)"}}>Answer & solution</Button>
                 <Button style={{fontSize:"10px",width:"10vw",color:"white",backgroundColor:'#3362AB',boxShadow:"0px 4px 13px rgba(0, 0, 0, 0.25)"}}>Save for later</Button>
             </Stack>
             <div ref={openCardRef} style={{padding:"10px",boxShadow:" 0px 4px 12px rgba(0, 0, 0, 0.13)" ,display:"none", width:"40vw",height:"25vh",marginBottom:"20px",marginLeft:"130px",marginTop:"30px",backgroundColor:"white"}} className="explanation-card">

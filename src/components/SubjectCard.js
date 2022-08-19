@@ -1,8 +1,14 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 export default function SubjectCard(props) {
     const {name,subpic} = props
+    const navigate = useNavigate()
+
+    const handleSubjectClick = () => {
+      navigate(`/questions?subject=${name}`)
+    }
   return (
-    <div style={{width:"180px" ,borderRadius:"0.7rem"}} >
+    <div onClick={handleSubjectClick} style={{width:"180px" ,borderRadius:"0.7rem"}} >
 
         <img src={subpic} style={{width:"180px",height:"250px" ,marginBottom:"0px"}}/>
         <h5 style={{
