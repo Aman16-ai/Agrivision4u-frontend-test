@@ -1,8 +1,10 @@
 import React from 'react'
 import { Stack } from '@mui/system'
 import { Typography } from '@mui/material'
+import { Link, useSearchParams } from 'react-router-dom'
 export default function LeftSideBar() {
 
+    const [searchParams] = useSearchParams()
     const subjects={
         "MATHEMATICS":["Geometry","Algebra","Trignometry","Arthimetics","Statistics"],
         "ENGLISH":["Verbal","Grammar","Reading"]
@@ -11,12 +13,7 @@ export default function LeftSideBar() {
     <div style={{width:"20vw",height:"100vh",backgroundColor:"#0B6E4F",display:"flex",flexDirection:"column",alignItems:"center"}}>
         <Stack style={{marginTop:"50px"}} direction={"column"}>
             <Typography style={{fontWeight:"bold",fontSize:"20px",color:"white"}}>All Subjects</Typography>
-
-            {/* <div style={{marginTop:"40px"}} className="sub1">
-                <Typography style={{color:"white",fontSize:"15px"}}>MATHEMATICS</Typography>
-                <hr style={{width:"10vw",backgroundColor:"white"}} />
-                <Typography style={{marginTop:"15px",color:"#DADADA"}}>Geometry</Typography>
-            </div> */}
+    
 
             {
                 Object.keys(subjects).map((subject)=> {
@@ -26,7 +23,7 @@ export default function LeftSideBar() {
                 <hr style={{width:"10vw",backgroundColor:"white"}} />
                 {
                     subjects[subject].map((e)=> {
-                        return <Typography style={{marginTop:"15px",color:"#DADADA"}}>{e}</Typography>
+                        return <Link to={`/questions?subject=${subject==="MATHEMATICS"?"Mathematics":"English"}&topic=${e}`} style={{display:"block",textDecoration:"none" , marginTop:"15px",color:"#DADADA"}}>{e}</Link>
                     })
                 }
             </div>

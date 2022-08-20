@@ -18,7 +18,7 @@ export default function SectionQuestionCard(props) {
     }
 
     const handleCheckAnswer = () => {
-        openCardRef.current.style.display="block"
+        openCardRef.current.style.display="block"   
     }
     useEffect(()=> {
         openCardRef.current.style.display="none"
@@ -27,7 +27,7 @@ export default function SectionQuestionCard(props) {
         <div
             style={{
                 backgroundColor: "#F8F8F8",
-                width: "60vw",
+                width: "auto",
                 height: "auto",
             }}
         >
